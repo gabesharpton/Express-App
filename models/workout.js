@@ -1,7 +1,11 @@
 const mongoose = require("../db/connection");
 
 const WorkoutSchema = new mongoose.Schema({
-  name: String,
+  name: {type: String, required: true},
+  reps: Number,
+  pounds: Number,
+  description: String,
+  image: String,
   complete: Boolean
 });
 

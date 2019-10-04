@@ -1,0 +1,19 @@
+[
+    {
+        "name": "pushps",
+        "reps": 0,
+        "pounds": 0,
+        "description": "Sometimes I'm at home and I remember I'm supposed to do 100 push-ups and I don't.",
+        "image": ""
+    },
+    {
+        "name": "sit-ups",
+        "reps": 0,
+        "description": "You know the drill, I hope"
+    },
+    {
+        "name": "squats",
+        "reps": 0,
+        "description": "Its like sitting down, but not"
+    }
+]
