@@ -1,0 +1,9 @@
+<h1>Workouts</h1>
+
+<ul>
+  {{#each workout}}
+    <li><a href="/{{this.id}}">{{this.name}}</a> - <a href="edit/{{this.id}}">Edit</a></li>
+  {{/each}}
+</ul>
+
+<a href="/new">New</a>
