@@ -1,5 +1,10 @@
 <h1>{{this.name}}</h1>
 
-    {{pounds}}
-    {{reps}}
+   <button class="decrease">-</button> {{pounds}}<button class="increase">+</button></br>
+   <button class="decrease">-</button>{{reps}}<button class="increase">+</button>
+<input type="text" value="pounds">
+<input type="submit" value="{{pounds}}">
 
+<form action="/{{this.id}}?_method=delete" method="post">
+  <input type="submit" value="Remove">
+</form>
