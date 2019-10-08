@@ -1,11 +1,12 @@
 const mongoose = require("../db/connection");
 
 const WorkoutSchema = new mongoose.Schema({
-  name: {type: String, required: true},
+  name: {type: String, true: true},
   reps: Number,
   pounds: Number,
   description: String,
   image: String,
+  dayOfWeek: [String],
   complete: Boolean
 });
 
