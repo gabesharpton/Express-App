@@ -13,6 +13,4 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use("/", workout);
 
-
-
 app.listen(3333, () => console.log("listening on port 3333"));

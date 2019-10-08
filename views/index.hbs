@@ -1,15 +1,10 @@
 <h1>Fitness Planner</h1>
 
-<h3>Today we will be doing:</h3>
+
 
 <ul>
   {{#each workout}}
-    <li><a href="/edit/{{this.id}}">{{this.name}}</a>
-    {{this.pounds}}
-    {{this.reps}}
-    <form action="/{{this.id}}/?_method=delete" method="post">
-  <input type="submit" value="Remove">
-</form>
+    <li><a href="/{{this.id}}">{{this.name}}</a>
   {{/each}}
 </ul>
 

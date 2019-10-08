@@ -1,14 +1,10 @@
 <h1>{{this.name}}</h1>
-<form action="/{{this.id}}?_method=put" method="post" accept-charset="utf-8">
 
-<input type="button" value="-"> <p>{{this.pounds}}</p><button class="increase">+</button></br>
-<button class="decrease">-</button><p>{{this.reps}}</p><button class="increase">+</button>
-<input type="number" value="{{this.pounds}}">
-<input type="submit" value="Update">
+   <button class="decrease">-</button> {{pounds}}<button class="increase">+</button></br>
+   <button class="decrease">-</button>{{reps}}<button class="increase">+</button>
+<input type="text" value="pounds">
+<input type="submit" value="{{pounds}}">
 
+<form action="/{{this.id}}?_method=delete" method="post">
+  <input type="submit" value="Remove">
 </form>
-{{#each workout}}
-{{pounds}}
-{{reps}}
-{{/each}}
-<a href="/">Back</a>
