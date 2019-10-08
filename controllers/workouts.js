@@ -16,40 +16,41 @@ router.get("/", (req, res) => {
   router.get("/add", (req, res) => res.render ("add"))
 
 
-  router.get("/:id", (req, res) => {
+  router.get("/edit/:id", (req, res) => {
       Workout.findOne({ _id: req.params.id}).then(workout => res.render("edit", {workout}))
   })
 
-//   router.get("/edit/:id", (req, res) => {
-//       Workout.findOne({_id: req.params.id }).then(workout => {
-//           res.render("edit", {workout})
-//       })
-//   })
 
   
-  //Add a new workout to certain day
+//Add a new workout to certain day
   
+router.post('/', (req, res) => {
+  Workout.create(req.body).then(workouts => {
+    Workout.find({}).then(
+        workout => {
+            res.render(workout)
+            .then(workout=>{
+            workout => res.redirect("/")
+    }
+    )
+  })
+})})
   
-  router.put("/:id", (req, res) => {
+  router.put("/", (req, res) => {
     req.body.complete = req.body.complete ? true : false
-    Workout.findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true })
-    
+    Workout.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    .then(workout => res.redirect("/"))
+
   });
 
-  router.post('/', (req, res) => {
-    Workout.create(req.body).then(workout => {
-      Workout.find({}).then(workout => {
-        res.render(workout)
-      })
-    })
-  })
 
   router.delete("/:id", (req, res) => {
-      Workout.findOneAndRemove( { _id: req.params.id }).then(() =>{
+      Workout.findByIdAndRemove( { _id: req.params.id }, req.body).then(() =>{
+          Workout.find({}).then(() =>{
         res.redirect("/")}
-  )})
-
-
+  )}
+  )
+})
 
 
 module.exports = router;
