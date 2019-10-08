@@ -4,8 +4,14 @@
 
 <ul>
   {{#each workout}}
-    <li><a href="/{{this.id}}">{{this.name}}</a>
+    <li>
+         <form action="/{{this.id}}?_method=delete" method="post">
+        <a href="{{this.id}}">{{this.name}}</a>
+    
+   
+    <input type="submit" value="Remove">
+  </form>
   {{/each}}
 </ul>
 
-<a href="/add">Add new workout</a>
+<a href="/workout/add">Add new workout</a>

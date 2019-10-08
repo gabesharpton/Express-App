@@ -1,0 +1,19 @@
+
+
+<h1>{{workout.name}}</h1>
+
+
+<form action="/{{workout.id}}" method="post" accept-charset="utf-8">
+<input type="number" value="{{workout.pounds}}" name="pounds" id="">
+<input type="submit" value="pounds">
+
+</form>
+
+
+
+
+{{#each workout}}
+{{this.pounds}}
+{{this.reps}}
+{{/each}}
+<a href="/">Back</a>
