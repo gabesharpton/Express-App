@@ -46,7 +46,7 @@
     }
 
 
-    input#remove {
+    input.remove {
         background-color: red;
         border-radius: 8px;
         border-color: red;
