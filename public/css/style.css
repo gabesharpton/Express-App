@@ -1,0 +1,19 @@
+ body{
+        text-align: center;
+        background-color: rgb(19, 114, 186);
+        max-width: 370px;
+    }
+    ul{
+        list-style-type: none;
+    }
+   input.button{
+        background-color: cyan
+    }
+
+    input#remove {
+        background-color: red
+    }
+    h2 {
+        font-size: 40px;
+    }
+    

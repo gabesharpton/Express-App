@@ -5,15 +5,19 @@
 
 <form action="/{{workout.id}}" method="post" accept-charset="utf-8">
 <input type="number" value="{{workout.pounds}}" name="pounds" id="">
-<input type="submit" value="pounds">
+<input type="submit" value="pounds" class="button">
+
+<form action="/{{workout.id}}" method="post" accept-charset="utf-8">
+<input type="number" value="{{workout.reps}}" name="reps" id="">
+<input type="submit" value="reps" class="button">
 
 </form>
 
 
 
 
-{{#each workout}}
-{{this.pounds}}
-{{this.reps}}
-{{/each}}
+
+<h2>Today you are doing this much: {{workout.pounds}} lbs</h2>
+<h2>And you are supposed to do this many: {{workout.reps}} reps</h2>
+
 <a href="/">Back</a>

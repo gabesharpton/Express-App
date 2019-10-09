@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Workout = require("../models/workout")
 
-
+//index
 router.get("/", (req, res) => {
     Workout.find({})
       .then(workout => {
@@ -12,30 +12,18 @@ router.get("/", (req, res) => {
       .catch(err => console.log(err));
   });
 
-  
+  //go to add workout page
   router.get("/workout/add", (req, res) => res.render ("./workout/add"))
 
-
+//change to specific workout
   router.get("/:id", (req, res) => {
       Workout.findOne({ _id: req.params.id}).then(workout => res.render("./workout/edit", {workout}))
   })
+  //update specific workout
   router.post("/:id", (req, res) => {
-    
-    console.log(req.body)
-    //req.body.complete = req.body.complete ? true : false
-    Workout.findByIdAndUpdate({ _id: req.params.id }, req.body).then(workout => {
-        console.log(workout)
-        res.redirect("/")
-        
-    })
-    
+    Workout.findByIdAndUpdate({ _id: req.params.id }, req.body).then(workout => res.redirect("/"))
   });
-
-  //Add a new workout to certain day
-  
-  
-  
-
+//create new workout
   router.post('/', (req, res) => {
     Workout.create(req.body).then(workout => {
       Workout.find({}).then(workout => {
@@ -43,7 +31,7 @@ router.get("/", (req, res) => {
       })
     })
   })
-
+//delete workout
   router.delete("/:id", (req, res) => {
       Workout.findByIdAndRemove( { _id: req.params.id }, req.body).then(() =>{
         res.redirect("/")}
