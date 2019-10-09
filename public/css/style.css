@@ -64,7 +64,7 @@
         
       }
       input[type=text] {
-          /* margin: 0 120px; */
+          margin: 0 120px;
           background-color: #3CBC8D;
           border-color: red;
           color: black;
@@ -112,14 +112,15 @@
 
     }
     h3 {
+        margin: 10px 120px 10px 0 ;
         font-size: 40px;
     }
 input#sub{
     background-color: #3CBC8D;
     border-color: #3CBC8D;
     position:fixed;
-    bottom: 25%;
-    right: 6%;
+    bottom: 40%;
+    right: 15%;
     padding: 10px 15px;
     font-size: 15px;
 
