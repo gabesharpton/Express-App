@@ -14,7 +14,7 @@
     }
    input.button{
         background-color: cyan;
-        border-color: cyan;
+        border: none;
         border-radius: 8px;
         margin: 0px 30px;
         block-size: 30px;
@@ -26,7 +26,7 @@
     input.remove {
         background-color: red;
         border-radius: 8px;
-        border-color: red;
+        border:none;
 
     }
     input[type=number] {
@@ -50,7 +50,7 @@
       }
       input#submit {
           background-color: red;
-          border-color: red;
+          border:none;
           border-radius: 8px;
           margin: 20px;
           height: 50px;
@@ -65,7 +65,7 @@
 
     input#sub{
         background-color: #3CBC8D;
-        border-color: #3CBC8D;
+        border:none;
         position:fixed;
         bottom: 40%;
         right: 15%;
