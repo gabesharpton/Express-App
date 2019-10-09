@@ -1,8 +1,8 @@
 const Workout = require("../models/workout");
 const SeedData = require("./seeds.json")
-Workout.remove({})
+Workout.deleteMany({})
     .then(() => {
-        return Workout.collection.insert(SeedData);
+        return Workout.collection.insertMany(SeedData);
     })
     .then(() => {
         process.exit();
