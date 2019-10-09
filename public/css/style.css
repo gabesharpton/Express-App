@@ -4,15 +4,14 @@
         padding: 0px 10px;
         font-family: 'Libre Baskerville', serif;
         background-image: url(wiiFit.png);
-        background-position-y: 205px;
+        background-attachment: fixed;
+        background-position-y:100%;
         background-repeat: no-repeat; 
     }
     ul{
         list-style-type: none;
     }
-    input#text{
-        margin: 0px 20px;
-    }
+   
    input.button{
         background-color: cyan;
         border-color: cyan;
@@ -89,12 +88,10 @@
         font-size: 40px;
         text-align: right;
         align-content: end;
-        width: 400px;
-        height: 500px;
-        position: sticky ;
-        bottom: 8px;
+        position: relative ;
+        bottom: -200px;
         right: 10px;
-        overflow-wrap: normal
+        
     }
    
     h1 {
@@ -114,3 +111,16 @@
         text-shadow: 1px 2px 1px black;
 
     }
+    h3 {
+        font-size: 40px;
+    }
+input#sub{
+    background-color: #3CBC8D;
+    border-color: #3CBC8D;
+    position:fixed;
+    bottom: 25%;
+    right: 6%;
+    padding: 10px 15px;
+    font-size: 15px;
+
+}
