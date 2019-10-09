@@ -4,11 +4,14 @@
 
 
 <form action="/{{workout.id}}" method="post" accept-charset="utf-8">
-<input type="number" value="{{workout.pounds}}" name="pounds" id="">
+<input type="number" value="{{workout.pounds}}" name="pounds" id="text">
+
+<input type="number" value="{{workout.reps}}" name="reps" id="text">
+
 <input type="submit" value="pounds" class="button">
 
-<form action="/{{workout.id}}" method="post" accept-charset="utf-8">
-<input type="number" value="{{workout.reps}}" name="reps" id="">
+
+
 <input type="submit" value="reps" class="button">
 
 </form>

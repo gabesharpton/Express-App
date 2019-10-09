@@ -1,18 +1,40 @@
  body{
         text-align: center;
         background-color: rgb(19, 114, 186);
-        max-width: 370px;
+        max-width: 425px;
+        font-family: 'Libre Baskerville', serif;
     }
     ul{
         list-style-type: none;
     }
+    input#text{
+        margin: 0px 20px;
+    }
    input.button{
-        background-color: cyan
+        background-color: cyan;
+        border-color: cyan;
+        border-radius: 8px;
+        margin: 0px 50px;
+        block-size: 30px;
+        height: 40px;
+        width: 80px;
     }
 
     input#remove {
-        background-color: red
+        background-color: red;
+        border-radius: 8px;
+        border-color: red;
+
     }
+    input[type=number] {
+        background-color: #3CBC8D;
+        color: white;
+       padding: 5px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+      }
+
     h2 {
         font-size: 40px;
     }
