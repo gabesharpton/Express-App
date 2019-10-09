@@ -1,5 +1,4 @@
-[
-    {
+[{
         "name": "pushps",
         "reps": 1,
         "pounds": 1,
@@ -9,11 +8,10 @@
     {
         "name": "sit-ups",
         "reps": 1,
-        "description": "You know the drill, I hope"
+        "description": "You know the drill, I hope."
     },
     {
         "name": "squats",
         "reps": 1,
-        "description": "Its like sitting down, but not"
-    }
-]
+        "description": "Its like sitting down, but not."
+}]

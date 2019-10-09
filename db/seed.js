@@ -6,4 +6,5 @@ Workout.deleteMany({})
     })
     .then(() => {
         process.exit();
-    })
+     } 
+    )

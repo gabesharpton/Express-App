@@ -4,7 +4,7 @@ const router = express.Router();
 const Workout = require("../models/workout")
 
 //index
-router.get("/", (req, res) => {
+router.get("/", (_req, res) => {
     Workout.find({})
       .then(workout => {
         res.render("index",  {workout} );
@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
   });
 
   //go to add workout page
-  router.get("/workout/add", (req, res) => res.render ("./workout/add"))
+  router.get("/workout/add", (_req, res) => res.render ("./workout/add"))
 
 //change to specific workout
   router.get("/:id", (req, res) => {
@@ -21,12 +21,12 @@ router.get("/", (req, res) => {
   })
   //update specific workout
   router.post("/:id", (req, res) => {
-    Workout.findByIdAndUpdate({ _id: req.params.id }, req.body).then(workout => res.redirect("/"))
+    Workout.findByIdAndUpdate({ _id: req.params.id }, req.body).then(_workout => res.redirect("/"))
   });
 //create new workout
   router.post('/', (req, res) => {
-    Workout.create(req.body).then(workout => {
-      Workout.find({}).then(workout => {
+    Workout.create(req.body).then(_workout => {
+      Workout.find({}).then(_workout => {
         res.redirect("/")
       })
     })
