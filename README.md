@@ -10,6 +10,6 @@ This is a backend application I created so that you can select different workout
 
 - Mongoose
 
--Handelbars (hbs)
+- Handelbars (hbs)
 
 
